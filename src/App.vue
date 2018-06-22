@@ -1,6 +1,10 @@
 <template>
   <div id="app">
     <tabs v-model="activeTab">
+      <div class="notTab">Not a tab</div>
+      <div tab="yellow" :style="{ background: 'yellow', color: 'black' }">
+        Tab: yellow
+      </div>
       <div
         v-for="(tab, i) in tabs"
         :key="i"
@@ -38,5 +42,8 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+.notTab {
+  padding: 10px;
 }
 </style>
